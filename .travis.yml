@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-node-env .
-  - docker tag simple-node hust1670/simple-node-env:latest
+  - docker tag simple-node-env hust1670/simple-node-env:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
